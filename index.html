@@ -9,6 +9,11 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <style>
+      .alternate-label {
+        color: rgb(167, 15, 167);
+      }
+    </style>
   </head>
 
   <body>
@@ -68,126 +73,38 @@
             class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7"
           >
             <a
-              class="font-medium text-blue-600 sm:py-6 dark:text-blue-500"
-              href="#"
-              aria-current="page"
-              >Landing</a
+              class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+              href="#education"
+              onclick="scrollToSection('education')"
+              >Education</a
             >
             <a
               class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#"
-              >Account</a
+              >Work Experience</a
             >
             <a
               class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#"
-              >Work</a
+              >Projects</a
             >
             <a
               class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#"
-              >Blog</a
+              >Skills</a
             >
-
-            <div
-              class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4"
-            >
-              <button
-                type="button"
-                class="flex items-center w-full text-gray-500 hover:text-gray-400 font-medium dark:text-gray-400 dark:hover:text-gray-500"
-              >
-                Dropdown
-                <svg
-                  class="ms-2 size-2.5 text-gray-600"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  ></path>
-                </svg>
-              </button>
-
-              <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5"
-              >
-                <a
-                  class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                  href="#"
-                >
-                  About
-                </a>
-                <div
-                  class="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]"
-                >
-                  <button
-                    type="button"
-                    class="w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                  >
-                    Sub Menu
-                    <svg
-                      class="sm:-rotate-90 ms-2 size-2.5 text-gray-600"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                      ></path>
-                    </svg>
-                  </button>
-
-                  <div
-                    class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full before:w-5 top-0 end-full !mx-[10px]"
-                  >
-                    <a
-                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                      href="#"
-                    >
-                      About
-                    </a>
-                    <a
-                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                      href="#"
-                    >
-                      Downloads
-                    </a>
-                    <a
-                      class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                      href="#"
-                    >
-                      Team Account
-                    </a>
-                  </div>
-                </div>
-
-                <a
-                  class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                  href="#"
-                >
-                  Downloads
-                </a>
-                <a
-                  class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                  href="#"
-                >
-                  Team Account
-                </a>
-              </div>
-            </div>
-
             <a
+              class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+              href="#"
+              >Activities / Leadership</a
+            >
+            <a
+              class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+              href="#"
+              >Upskilling</a
+            >
+
+            <!-- <a
               class="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
               href="#"
             >
@@ -204,14 +121,170 @@
                 />
               </svg>
               Log in
-            </a>
+            </a> -->
           </div>
         </div>
       </nav>
     </header>
 
-    <!-- Your content goes here -->
+    <section id="education">
+      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <!-- Title -->
+        <div class="max-w-2xl mx-auto mb-10 lg:mb-14">
+          <h2
+            style="color: rgb(167, 15, 167)"
+            class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white"
+          >
+            Education
+          </h2>
+        </div>
+        <!-- End Title -->
 
-    <!-- Add your JavaScript link here if needed -->
+        <div
+          class="max-w-2xl mx-auto divide-y divide-gray-200 dark:divide-gray-700"
+        >
+          <div class="first:pt-0 last:pb-0">
+            <div class="flex gap-x-5">
+              <div>
+                <h3
+                  class="md:text-lg font-semibold text-gray-800 dark:text-gray-200"
+                >
+                  Bachelor of Computing (Information Systems) with Honours
+                </h3>
+                <p class="mt-1 text-gray-500">
+                  National University of Singapore · 2020 → 2024
+                </p>
+                <div class="hs-accordion-group">
+                  <div class="hs-accordion active" id="hs-basic-heading-one">
+                    <button
+                      class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400"
+                      aria-controls="hs-basic-collapse-one"
+                      onclick="toggleAccordion('hs-basic-collapse-one')"
+                    >
+                      <svg
+                        class="hs-accordion-active:hidden block size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+
+                      <em>Relevant Coursework</em>
+                    </button>
+                    <div
+                      id="hs-basic-collapse-one"
+                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                      aria-labelledby="hs-basic-heading-one"
+                    >
+                      <p>
+                        Discrete Structures ·
+                        <span class="alternate-label"
+                          >Data Structures & Algorithms</span
+                        >
+                        · Programming Methodology ·
+                        <span class="alternate-label"
+                          >Enterprise Systems Architecture and Design</span
+                        >
+                        · Enterprise Systems Interface Design and Development ·
+                        <span class="alternate-label"
+                          >Information Systems Capstone Project</span
+                        >
+                        · Governance, Regulation, and Compliance Technology ·
+                        <span class="alternate-label"
+                          >IT-enabled Healthcare Solutioning</span
+                        >
+                        · Agile IT with DevOp ·
+                        <span class="alternate-label"
+                          >Introduction to Computer Networks</span
+                        >
+                        · Information Systems Leadership and Communication ·
+                        <span class="alternate-label"
+                          >Information Systems Consulting</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-8 first:pt-0 last:pb-0">
+            <div class="flex gap-x-5">
+              <div>
+                <h3
+                  class="md:text-lg font-semibold text-gray-800 dark:text-gray-200"
+                >
+                  Diploma in Biomedical Engineering with Merit
+                </h3>
+                <p class="mt-1 text-gray-500">
+                  Temasek Polytechnic · 2017 → 2020
+                </p>
+                <div class="hs-accordion-group">
+                  <div class="hs-accordion active" id="hs-basic-heading-two">
+                    <button
+                      class="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400"
+                      aria-controls="hs-basic-collapse-two"
+                      onclick="toggleAccordion('hs-basic-collapse-two')"
+                    >
+                      <svg
+                        class="hs-accordion-active:hidden block size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+
+                      <em>Relevant Coursework</em>
+                    </button>
+                    <div
+                      id="hs-basic-collapse-two"
+                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                      aria-labelledby="hs-basic-heading-two"
+                    >
+                      <p class="text-gray-800 dark:text-gray-200">
+                        Computer Programming for Problem Solving ·
+                        <span class="alternate-label">Global Citizenship</span>
+                        · Writing and Oral Presentation
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      function toggleAccordion(accordionId) {
+        const accordionContent = document.getElementById(accordionId);
+        if (accordionContent) {
+          accordionContent.classList.toggle("hidden");
+        }
+      }
+    </script>
   </body>
 </html>
