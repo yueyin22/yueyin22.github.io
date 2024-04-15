@@ -108,21 +108,25 @@
             <a
               class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#work"
+              onclick="scrollToSection('work')"
               >Work Experience</a
             >
             <a
               class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#projects"
+              onclick="scrollToSection('projects')"
               >Projects</a
             >
             <a
               class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#skills"
+              onclick="scrollToSection('skills')"
               >Skills</a
             >
             <a
               class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
               href="#upskilling"
+              onclick="scrollToSection('upskilling')"
               >Upskilling</a
             >
           </div>
@@ -282,7 +286,7 @@
                     </button>
                     <div
                       id="hs-basic-with-title-and-arrow-stretched-collapse-one"
-                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
                       aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
                     >
                       <p>
@@ -616,7 +620,7 @@
                     </button>
                     <div
                       id="hs-basic-with-title-and-arrow-stretched-collapse-six"
-                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300"
+                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
                       aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-six"
                     >
                       <p class="text-gray-800 dark:text-gray-200">
@@ -3145,6 +3149,28 @@
       </a>
 
       <script>
+        // Function to toggle the visibility of the collapsible menu
+        function toggleMenu() {
+          var menu = document.getElementById("navbar-collapse-with-animation");
+          if (menu.classList.contains("hidden")) {
+            // If menu is hidden, show it
+            menu.classList.remove("hidden");
+          } else {
+            // If menu is visible, hide it
+            menu.classList.add("hidden");
+          }
+        }
+
+        // Event listener for the toggle button click
+        document.addEventListener("DOMContentLoaded", function () {
+          var toggleButton = document.querySelector(".hs-collapse-toggle");
+          if (toggleButton) {
+            toggleButton.addEventListener("click", function () {
+              toggleMenu();
+            });
+          }
+        });
+
         function scrollToSection(sectionId) {
           const section = document.getElementById(sectionId);
           if (section) {
@@ -3196,28 +3222,6 @@
           } else {
             isBackToTopRendered = false;
             alterStyles(isBackToTopRendered);
-          }
-        });
-
-        // Function to toggle the visibility of the collapsible menu
-        function toggleMenu() {
-          var menu = document.getElementById("navbar-collapse-with-animation");
-          if (menu.classList.contains("hidden")) {
-            // If menu is hidden, show it
-            menu.classList.remove("hidden");
-          } else {
-            // If menu is visible, hide it
-            menu.classList.add("hidden");
-          }
-        }
-
-        // Event listener for the toggle button click
-        document.addEventListener("DOMContentLoaded", function () {
-          var toggleButton = document.querySelector(".hs-collapse-toggle");
-          if (toggleButton) {
-            toggleButton.addEventListener("click", function () {
-              toggleMenu();
-            });
           }
         });
       </script>
