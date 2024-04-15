@@ -12,6 +12,39 @@
       .alternate-label {
         color: rgb(34, 85, 180);
       }
+      /* ----- Back to Top ----- */
+
+    .back-to-top {
+        position: fixed;
+        bottom: 4rem;
+        right: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        width: 4rem;
+        background-color: rgb(34, 85, 180);
+        border-radius: 50%;
+        z-index: 10;
+        visibility: hidden;
+        transition: all .4s;
+    }
+
+    .back-to-top__image {
+        height: 70%;
+    }
+
+    @media(max-width: 900px) {
+        .back-to-top {
+            right: 2rem;
+        }
+    }
+
+    @media(max-width: 500px) {
+        .back-to-top {
+            right: 1rem;
+        }
+    }
     </style>
   </head>
 
@@ -229,7 +262,7 @@
                 class="hs-accordion-group divide-y divide-gray-200 dark:divide-gray-700"
               >
                 <div
-                  class="hs-accordion pb-3 active"
+                  class="hs-accordion pb-3"
                   id="hs-basic-with-title-and-arrow-stretched-heading-one"
                 >
                   <button
@@ -564,7 +597,7 @@
                 class="hs-accordion-group divide-y divide-gray-200 dark:divide-gray-700"
               >
                 <div
-                  class="hs-accordion pb-3 active"
+                  class="hs-accordion pb-3"
                   id="hs-basic-with-title-and-arrow-stretched-heading-six"
                 >
                   <button
@@ -3038,6 +3071,9 @@
     <!-- End Grid -->
   </footer>
   <!-- ========== END FOOTER ========== -->
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
     </div>
     <script>
       function scrollToSection(sectionId) {
@@ -3053,6 +3089,43 @@
           accordionContent.classList.toggle("hidden");
         }
       }
+
+      const handleFirstTab = (e) => {
+      if(e.key === 'Tab') {
+        document.body.classList.add('user-is-tabbing');
+        window.removeEventListener('keydown', handleFirstTab);
+        window.addEventListener('mousedown', handleMouseDownOnce);
+      }
+    };
+
+    const handleMouseDownOnce = () => {
+      document.body.classList.remove('user-is-tabbing');
+      window.removeEventListener('mousedown', handleMouseDownOnce);
+      window.addEventListener('keydown', handleFirstTab);
+    };
+
+    window.addEventListener('keydown', handleFirstTab);
+
+    // Back to Top Button
+    const backToTopButton = document.querySelector(".back-to-top");
+    let isBackToTopRendered = false;
+
+    let alterStyles = (isBackToTopRendered) => {
+      backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
+      backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
+      backToTopButton.style.transform = isBackToTopRendered ? "scale(1)" : "scale(0)";
+    };
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        isBackToTopRendered = true;
+        alterStyles(isBackToTopRendered);
+      } else {
+        isBackToTopRendered = false;
+        alterStyles(isBackToTopRendered);
+      }
+    });
+
     </script>
   </body>
 </html>
